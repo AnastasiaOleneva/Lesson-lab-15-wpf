@@ -36,12 +36,6 @@ namespace Lesson_lab_15_wpf
             doc.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            XpsDocument doc = new XpsDocument("Data/WPFC#.xps", FileAccess.Read);
-            documentViewer.Document = doc.GetFixedDocumentSequence();
-            doc.Close();
-            
-        }
+    
     }
 }

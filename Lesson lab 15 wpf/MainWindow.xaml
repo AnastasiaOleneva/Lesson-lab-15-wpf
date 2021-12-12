@@ -22,7 +22,7 @@
         </DocumentViewer>
         <StackPanel Grid.Row="1 " HorizontalAlignment="Center">
             <Button Content="Сохранить" Click="Button_Click"  />
-            <Button Content="Загрузить" Click="Button_Click_1"  />
+            <Button Content="Загрузить"   />
 
         </StackPanel>
     </Grid>

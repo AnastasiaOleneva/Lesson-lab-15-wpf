@@ -1,0 +1,136 @@
+﻿<Window x:Class="_15._2_WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_15._2_WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="flowDSW">
+            <FlowDocument>
+                <Paragraph>
+                    Сведения о
+                    <Hyperlink NavigateUri=" https://ru.wikipedia.org/wiki/Windows_Presentation_Foundation">WPF C#</Hyperlink>
+                </Paragraph>
+                <Paragraph>
+                    <Bold>Windows Presentation Foundation (WPF)</Bold> — аналог
+                    <Hyperlink NavigateUri="https://ru.wikipedia.org/wiki/Windows_Forms">WinForms</Hyperlink> , система для построения клиентских приложений Windows с визуально привлекательными возможностями взаимодействия с пользователем, графическая (презентационная) подсистема в составе .NET Framework (начиная с версии 3.0), использующая язык XAML.
+
+WPF предустановлена в Windows Vista (.NET Framework 3.0), Windows 7 (.NET Framework 3.5 SP1), Windows 8 (.NET Framework 4.0 и 4.5), Windows 8.1 (.NET Framework 4.5.1) и Windows 10 (.NET Framework 4.7). С помощью WPF можно создавать широкий спектр как автономных, так и запускаемых в браузере приложений.
+                В основе WPF лежит векторная система визуализации, не зависящая от разрешения устройства вывода и созданная с учётом возможностей современного графического оборудования. WPF предоставляет средства для создания визуального интерфейса, включая язык XAML (eXtensible Application Markup Language), элементы управления, привязку данных, макеты, двухмерную и трёхмерную графику, анимацию, стили, шаблоны, документы, текст, мультимедиа и оформление[2].
+
+Графической технологией, лежащей в основе WPF, является DirectX, в отличие от Windows Forms, где используется GDI/GDI+. Производительность WPF выше, чем у GDI+ за счёт использования аппаратного ускорения графики через DirectX.
+
+Также существует урезанная версия CLR, называющаяся WPF/E, она же известна как Silverlight.
+                </Paragraph>
+                <Paragraph>
+                    Помимо основного класса
+                    <Bold>Binding </Bold>  в WPF реализовано еще несколько механизмов привязок:
+                </Paragraph>
+                <List MarkerStyle="Circle">
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>  MultiBinding </Bold>   — позволяет создавать множественные привязки, указывая несколько элементов
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold> TemplateBinding</Bold>  — используется в шаблонах для связывания свойства элемента внутри шаблона со свойством элемента, к которому применен шаблон
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold> PriorityBinding </Bold>  — ранжирует список привязок и выбирает из них свойство (согласно приоритету) к которому будет применена привязка. Если привязка, имеющая наивысший приоритет успешно возвращает значение, то нет необходимости обрабатывать другие привязки в списке
+                        </Paragraph>
+                       
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    Последние версии:
+                </Paragraph>
+                <Table  >
+                    <Table.Columns >
+                        <TableColumn Width="0.5*"/>
+                        <TableColumn Width="*" />
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    № версии
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Дата выхода
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    WPF 4.5.1
+                                </Paragraph>
+                            </TableCell>
+
+                            <TableCell>
+                                <Paragraph>
+                                    Октябрь 2013
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    WPF 4.5.2
+                                </Paragraph>
+                            </TableCell>
+
+                            <TableCell>
+                                <Paragraph>
+                                    Май 2014
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    WPF 4.5.6
+                                </Paragraph>
+                            </TableCell>
+
+                            <TableCell>
+                                <Paragraph>
+                                    Июль 2015
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <BlockUIContainer>
+                    <StackPanel>
+                        <TextBlock Text="Нажмите,после ознакомления:"/>
+                        <Button Content="Ознакомлен"/>
+                    </StackPanel>
+                </BlockUIContainer>
+
+
+
+
+
+
+
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Открыть" Width="100" Click="Button_Click_2" />
+            <Button Content="Сохранить" Width="100" Click="Button_Click_1" />
+            <Button Content="Очистить" Width="100" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
